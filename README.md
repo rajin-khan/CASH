@@ -63,7 +63,7 @@ To exit, type:
 ```bash
  exit
 ```
-
+</div>
 ---
 
 ## ✅ Common System Commands (that work right now in `ca$h`):
@@ -169,6 +169,7 @@ xdg-open .             # Open file manager
 ```
 
 ---
+<div align="center">
 
 ## 🛣 Roadmap
 - [ ] Implement command history
