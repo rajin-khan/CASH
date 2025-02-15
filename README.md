@@ -25,6 +25,8 @@
 
 ## 🛠 Installation
 
+</div>
+
 ### 1️⃣ Clone the Repository
 ```bash
  git clone https://github.com/yourusername/cash.git
@@ -63,7 +65,6 @@ To exit, type:
 ```bash
  exit
 ```
-</div>
 ---
 
 ## ✅ Common System Commands (that work right now in `ca$h`):
