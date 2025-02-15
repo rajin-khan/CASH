@@ -66,6 +66,110 @@ To exit, type:
 
 ---
 
+## ✅ Common System Commands (that work right now in `ca$h`):
+
+### **File & Directory Operations**
+```bash
+ls           # List files in the current directory
+pwd          # Show current directory path
+mkdir dir    # Create a new directory
+rmdir dir    # Remove a directory
+rm file.txt  # Delete a file
+cp file1 file2  # Copy files
+mv old new   # Rename or move files
+find . -name "*.txt"  # Search for files
+touch file   # Create an empty file
+stat file    # Get file details
+```
+
+### **Process & System Information**
+```bash
+ps           # Show running processes
+top          # Show system stats
+htop         # (if installed) Interactive process viewer
+whoami       # Show the current user
+id           # Show user ID
+uptime       # Show how long the system has been running
+uname -a     # Show system info
+hostname     # Show computer name
+date         # Show current date and time
+cal          # Show a calendar
+df -h        # Show disk usage
+du -sh *     # Show size of directories
+free -m      # Show memory usage
+```
+
+### **Text Processing & File Viewing**
+```bash
+cat file.txt     # View file content
+less file.txt    # View file with scrolling
+more file.txt    # View file page by page
+head -n 10 file  # Show first 10 lines
+tail -n 10 file  # Show last 10 lines
+grep "word" file # Search for "word" in file
+wc -l file       # Count lines in a file
+awk '{print $1}' file  # Process text in a file
+sed 's/old/new/g' file # Replace text in a file
+```
+
+### **Networking & Internet**
+```bash
+ping google.com     # Check internet connection
+curl https://site.com  # Download a webpage
+wget https://file.com  # Download a file
+nslookup google.com # Get DNS information
+traceroute google.com # Trace network path
+```
+
+### **User Management**
+```bash
+who       # Show logged-in users
+w         # Show detailed user info
+groups    # Show groups of the current user
+passwd    # Change password (may require sudo)
+```
+
+### **Archiving & Compression**
+```bash
+tar -cvf archive.tar file1 file2  # Create a tar archive
+tar -xvf archive.tar  # Extract a tar archive
+zip archive.zip file  # Create a zip archive
+unzip archive.zip      # Extract a zip archive
+gzip file              # Compress a file
+gunzip file.gz         # Decompress a file
+```
+
+### **Compiling & Development**
+```bash
+gcc program.c -o program  # Compile a C program
+g++ program.cpp -o program # Compile a C++ program
+make            # Run Makefile
+python3 script.py  # Run a Python script
+node script.js  # Run a Node.js script
+javac Main.java && java Main  # Compile and run Java
+```
+
+### **Package Management (Depends on OS)**
+```bash
+brew install package  # (macOS) Install a package
+apt install package   # (Linux) Install a package
+pacman -S package     # (Arch Linux) Install a package
+```
+
+### **Graphical & macOS-Specific Commands**
+✅ If you are on **macOS**, you can run:
+```bash
+open .                 # Open Finder in current directory
+open -a "Google Chrome" # Open Chrome browser
+say "Hello, world"      # Text-to-speech
+```
+✅ If you are on **Linux**, try:
+```bash
+xdg-open .             # Open file manager
+```
+
+---
+
 ## 🛣 Roadmap
 - [ ] Implement command history
 - [ ] Add support for piping (`|`) and redirection (`>`, `<`)
@@ -84,6 +188,10 @@ Contributions are **welcome**! If you’d like to add features or fix bugs:
 5. **Create a Pull Request**
 
 ---
+
+## List of supported commands (till now):
+
+
 
 ## 📜 License
 
