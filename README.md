@@ -191,10 +191,6 @@ Contributions are **welcome**! If you’d like to add features or fix bugs:
 
 ---
 
-## List of supported commands (till now):
-
-
-
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
