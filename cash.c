@@ -35,6 +35,11 @@ void execute_command(char *input) {
 
     if (args[0] == NULL) return;
 
+    if (strcmp(args[0], "clear") == 0) {
+
+        system("clear");
+    }
+
     if (strcmp(args[0], "exit") == 0) {
 
         printf("Closing ca$h...\n");
