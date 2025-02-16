@@ -17,7 +17,7 @@ void display_welcome_message() {
     printf("╚██████╗██║  ██║███████║██║  ██║\n");
     printf(" ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝\n");
     printf("\n");
-    printf("💰 Welcome to ca$h - the simplest command and script shell! \n");
+    printf("Welcome to ca$h - the simplest command and script shell! \n");
     printf("Type 'exit' to quit.\n\n");
 }
 
@@ -34,6 +34,28 @@ void execute_command(char *input) {
     }
 
     if (args[0] == NULL) return;
+
+    if (strcmp(args[0], "exit") == 0) {
+
+        printf("Closing ca$h...\n");
+        exit(0);
+    }
+
+    if (strcmp(args[0], "cd") == 0) {
+
+        const char *home = getenv("HOME");
+        const char *dir = (args[1] == NULL) ? home : args[1];
+
+        if (dir== NULL) {
+
+            fprintf(stderr, "cd: HOME path not set\n");
+        } else if (chdir(dir) != 0) {
+
+            perror("cd failed");
+        }
+
+        return;
+    }
 
     pid_t pid = fork();
 
