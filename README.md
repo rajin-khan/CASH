@@ -86,6 +86,7 @@ stat file    # Get file details
 
 ### **Process & System Information**
 ```bash
+clear        # Clear screen
 exit         # Close the shell
 ps           # Show running processes
 top          # Show system stats
