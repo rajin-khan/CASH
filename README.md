@@ -72,6 +72,7 @@ To exit, type:
 ### **File & Directory Operations**
 ```bash
 ls           # List files in the current directory
+cd           # Change directory
 pwd          # Show current directory path
 mkdir dir    # Create a new directory
 rmdir dir    # Remove a directory
@@ -85,6 +86,7 @@ stat file    # Get file details
 
 ### **Process & System Information**
 ```bash
+exit         # Close the shell
 ps           # Show running processes
 top          # Show system stats
 htop         # (if installed) Interactive process viewer
