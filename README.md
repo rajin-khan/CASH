@@ -101,6 +101,7 @@ cal          # Show a calendar
 df -h        # Show disk usage
 du -sh *     # Show size of directories
 free -m      # Show memory usage
+&            # Running backgroung processes
 ```
 
 ### **Text Processing & File Viewing**

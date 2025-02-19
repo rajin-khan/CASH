@@ -26,6 +26,7 @@ void execute_command(char *input) {
 
     char *args[MAX_ARGS];
     int i = 0;
+    int background = 0;
 
     args[i] = strtok(input, " \n");
     while (args[i] != NULL) {
@@ -35,9 +36,16 @@ void execute_command(char *input) {
 
     if (args[0] == NULL) return;
 
+    if (i > 0 && strcmp(args[i-1], "&") == 0) {
+
+        background = 1;
+        args[i -1] = NULL;
+    }
+
     if (strcmp(args[0], "clear") == 0) {
 
         system("clear");
+        return;
     }
 
     if (strcmp(args[0], "exit") == 0) {
@@ -49,7 +57,17 @@ void execute_command(char *input) {
     if (strcmp(args[0], "cd") == 0) {
 
         const char *home = getenv("HOME");
-        const char *dir = (args[1] == NULL) ? home : args[1];
+        const char *dir = args[1];
+
+        if (dir == NULL) {
+
+            dir = getenv("HOME");
+            if (dir == NULL) {
+                
+                fprintf(stderr, "cd: HOME not set\n");
+                return;
+            }
+        }
 
         if (dir== NULL) {
 
@@ -77,7 +95,12 @@ void execute_command(char *input) {
         exit(EXIT_FAILURE);
     } else {
 
-        wait(NULL);
+        if (background) {
+            printf("[%d] %d\n", pid, pid);
+        } else {
+            
+            waitpid(pid, NULL, 0);
+        }
     }
 
 }
