@@ -541,8 +541,8 @@ void display_welcome_message() {
     printf("╚██████╗██║  ██║███████║██║  ██║\n");
     printf(" ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝\n");
     printf("\n");
-    printf("Welcome to ca$h - An Educational Command Shell!\n");
-    printf("Demonstrates: Process Creation (fork), Program Execution (execvp),\n");
+    printf("Welcome to ca$h - A simple shell by Rajin Khan!\n");
+    printf("Demonstrates specific OS Concepts: Process Creation (fork), Program Execution (execvp),\n");
     printf("Waiting (waitpid), Background Jobs (&), File I/O Redirection (<, >),\n");
     printf("IPC via Pipes (|), Signal Handling (SIGCHLD), Job Control (jobs, fg, bg),\n");
     printf("History & Editing (readline)\n");
