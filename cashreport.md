@@ -1,17 +1,16 @@
-# cash — Command and Script Shell  
-
+# cash — a simple shell written in C. 
 
 ---
-## Project Information
+## Formal Report
 
 | Field | Details |
 |:------|:--------|
-| **Course ID:** | CSE323 |
-| **Course Name:** | Operating Systems |
-| **Faculty Initials:** | SMU1 |
 | **Student Name:** | Adib Ar Rahman Khan |
 | **Student ID:** | 2212708042 |
-| **Date:** | 19/4/24 |
+| **Course ID:** | CSE323 |
+| **Faculty Initials:** | SMU1 |
+| **Course Name:** | Operating Systems |
+| **Date:** | 19/4/25 |
 
 ---
 
@@ -177,15 +176,14 @@ ca$h> sleep 5 &
 
 ---
 
-### 5.6 Job Control (jobs, fg, bg)
+### 5.6 Job Control (jobs)
 **Inside cash:**  
-- Maintains job list, controls jobs with process groups and signals.
+- Maintains job list
 
 **Test:**
 ```bash
 ca$h> sleep 100 &
 ca$h> jobs
-ca$h> fg %1
 ```
 **Expect:**  
 - Job is correctly moved between background and foreground.

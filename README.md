@@ -1,25 +1,27 @@
-
 <div align="center">
 
-![cash Banner](./cash-logo-main.png)
+![CASH Banner](./cash-logo-main.png)
 
-# cash - A Simple Command and Script Shell
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&logo=appveyor)](LICENSE) [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge&logo=travis)]() [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS-lightgrey?style=for-the-badge&logo=linux)]() [![Shell](https://img.shields.io/badge/shell-cash%20v0.1-yellow?style=for-the-badge&logo=gnu-bash)]()
-
----
-
-**cash** (*Command and Script Shell*) is a simple shell built in C to explore **kernel processes, system calls, and shell internals**. This project serves as a **learning exercise** in understanding how shells interact with the OS, manage processes, and execute commands.
+# CASH - A Simple Command and Script Shell
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&logo=appveyor)](LICENSE) [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge&logo=travis)]() [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS-lightgrey?style=for-the-badge&logo=linux)]() [![Shell](https://img.shields.io/badge/shell-cash%20v0.2-yellow?style=for-the-badge&logo=gnu-bash)]()
 
 ---
 
-## 🚀 Features
+**CASH** (*Command and Script Shell Advanced*) is a simple yet powerful shell built in C to explore **kernel processes, system calls, shell internals**, and **basic scripting**.  
+This project serves as a **learning exercise** and a **foundation** for understanding how shells interact with the OS, manage processes, and execute commands — with real, modern features.
+
+---
+
+## 💻 Features
 ✅ Minimalist and lightweight shell implementation  
 ✅ Command execution with argument parsing  
 ✅ Process management using system calls  
 ✅ Basic built-in commands (`cd`, `exit`, etc.)  
-✅ Simple scripting capabilities (to be added)  
-
-*(More features will be added as development progresses!)*
+✅ Background process execution (`&`)  
+✅ Input and output redirection (`>`, `<`)  
+✅ Piping between commands (`|`)  
+✅ (Experimental) Simple script file execution  
+✅ Extensible design for future features  
 
 ---
 
@@ -29,175 +31,149 @@
 
 ### 1️⃣ Clone the Repository
 ```bash
- git clone https://github.com/yourusername/cash.git
- cd cash
+git clone https://github.com/yourusername/cash.git
+cd cash
 ```
 
 ### 2️⃣ Build the Shell
 ```bash
- make
+make
 ```
 
-### 3️⃣ Run CaSh
+### 3️⃣ Run CASH
 ```bash
- ./cash
+./cash
 ```
 
 *(Optional: Move to `/usr/local/bin` for global access)*
 ```bash
- sudo cp cash /usr/local/bin
+sudo cp cash /usr/local/bin
 ```
 
 ---
 
 ## 📌 Usage
-Start CaSh by running:
+Start CASH by running:
 ```bash
- cash
+cash
 ```
-Run standard commands like:
+
+Use it like a normal shell:
 ```bash
- ls -l
- echo "Hello, CaSh!"
- pwd
+ls -l
+echo "Hello, CASH!"
+pwd
 ```
+
 To exit, type:
 ```bash
- exit
-```
----
-
-## ✅ Common System Commands (that work right now in `ca$h`):
-
-### **File & Directory Operations**
-```bash
-ls           # List files in the current directory
-cd           # Change directory
-pwd          # Show current directory path
-mkdir dir    # Create a new directory
-rmdir dir    # Remove a directory
-rm file.txt  # Delete a file
-cp file1 file2  # Copy files
-mv old new   # Rename or move files
-find . -name "*.txt"  # Search for files
-touch file   # Create an empty file
-stat file    # Get file details
-```
-
-### **Process & System Information**
-```bash
-clear        # Clear screen
-exit         # Close the shell
-ps           # Show running processes
-top          # Show system stats
-htop         # (if installed) Interactive process viewer
-whoami       # Show the current user
-id           # Show user ID
-uptime       # Show how long the system has been running
-uname -a     # Show system info
-hostname     # Show computer name
-date         # Show current date and time
-cal          # Show a calendar
-df -h        # Show disk usage
-du -sh *     # Show size of directories
-free -m      # Show memory usage
-&            # Running backgroung processes
-```
-
-### **Text Processing & File Viewing**
-```bash
-cat file.txt     # View file content
-less file.txt    # View file with scrolling
-more file.txt    # View file page by page
-head -n 10 file  # Show first 10 lines
-tail -n 10 file  # Show last 10 lines
-grep "word" file # Search for "word" in file
-wc -l file       # Count lines in a file
-awk '{print $1}' file  # Process text in a file
-sed 's/old/new/g' file # Replace text in a file
-```
-
-### **Networking & Internet**
-```bash
-ping google.com     # Check internet connection
-curl https://site.com  # Download a webpage
-wget https://file.com  # Download a file
-nslookup google.com # Get DNS information
-traceroute google.com # Trace network path
-```
-
-### **User Management**
-```bash
-who       # Show logged-in users
-w         # Show detailed user info
-groups    # Show groups of the current user
-passwd    # Change password (may require sudo)
-```
-
-### **Archiving & Compression**
-```bash
-tar -cvf archive.tar file1 file2  # Create a tar archive
-tar -xvf archive.tar  # Extract a tar archive
-zip archive.zip file  # Create a zip archive
-unzip archive.zip      # Extract a zip archive
-gzip file              # Compress a file
-gunzip file.gz         # Decompress a file
-```
-
-### **Compiling & Development**
-```bash
-gcc program.c -o program  # Compile a C program
-g++ program.cpp -o program # Compile a C++ program
-make            # Run Makefile
-python3 script.py  # Run a Python script
-node script.js  # Run a Node.js script
-javac Main.java && java Main  # Compile and run Java
-```
-
-### **Package Management (Depends on OS)**
-```bash
-brew install package  # (macOS) Install a package
-apt install package   # (Linux) Install a package
-pacman -S package     # (Arch Linux) Install a package
-```
-
-### **Graphical & macOS-Specific Commands**
-✅ If you are on **macOS**, you can run:
-```bash
-open .                 # Open Finder in current directory
-open -a "Google Chrome" # Open Chrome browser
-say "Hello, world"      # Text-to-speech
-```
-✅ If you are on **Linux**, try:
-```bash
-xdg-open .             # Open file manager
+exit
 ```
 
 ---
+
+## ✅ Supported Functionalities
+
+### **1. Basic Commands**
+Run external system commands with arguments:
+```bash
+ls -l
+mkdir test
+rm file.txt
+```
+
+### **2. Built-in Commands**
+Internal commands handled by CASH itself:
+```bash
+cd /path/to/dir
+exit
+help
+```
+
+### **3. Background Processes**
+Add `&` at the end to run commands in the background:
+```bash
+sleep 10 &
+firefox &
+```
+
+### **4. Input/Output Redirection**
+Redirect output to a file, or read input from a file:
+```bash
+ls > files.txt
+sort < unsorted.txt
+```
+
+### **5. Piping**
+Chain commands using pipes (`|`):
+```bash
+ls -l | grep "txt"
+cat file.txt | wc -l
+```
+
+### **6. (Experimental) Scripting Support**
+Basic execution of `.cash` script files (simple sequences of commands):
+```bash
+cash script.cash
+```
+
+---
+
+## 🌟 Example Use Cases
+
+```bash
+# List all `.c` files
+ls *.c
+
+# Count lines in all `.txt` files
+cat *.txt | wc -l
+
+# Create, write, and display a file
+echo "Hello CASH" > hello.txt
+cat hello.txt
+
+# Sleep in background
+sleep 30 &
+
+# Script execution (if script file contains CASH commands)
+./myscript.cash
+```
+
+---
+
 <div align="center">
 
-## 🛣 Roadmap
-- [ ] Implement command history
-- [ ] Add support for piping (`|`) and redirection (`>`, `<`)
-- [ ] Implement background and foreground process handling
-- [ ] Add basic scripting support (`.cash` files)
-- [ ] Create a configuration file (`.cashrc` for aliases, env vars, etc.)
+## 🔮 Roadmap
+| Feature                          | Status      |
+|----------------------------------|-------------|
+| ✅ Command execution | Completed |
+| ✅ Built-in commands | Completed |
+| ✅ Background process handling | Completed |
+| ✅ Redirection (`>`, `<`) | Completed |
+| ✅ Piping (`|`) | Completed |
+| ✅ (Basic) Script file support | Completed |
+| ✅ Command history (`arrow keys` navigation) | Completed |
+| ⏳ Auto-completion (`tab` key) | Planning |
+| ⏳ Alias and environment variable support | Planning |
+| ⏳ Advanced scripting capabilities | Planning |
+| ⏳ Configuration file (`.cashrc` for startup customization) | Planning |
 
 ---
 
-## 🤝 Contributing
-Contributions are **welcome**! If you’d like to add features or fix bugs:
-1. **Fork** the repository
-2. **Create a feature branch** (`git checkout -b feature-name`)
-3. **Commit your changes** (`git commit -m "Add cool feature"`)
-4. **Push to your branch** (`git push origin feature-name`)
-5. **Create a Pull Request**
+## **👨‍💻 Dev Team**
+
+Just me, actually.
+
+| Name                      | Institution             | ID | GitHub | Followers |
+|---------------------------|-------------------------|--  |--------|------|
+| **Rajin Khan**            | North South University | 2212708042 | [![Rajin's GitHub](https://img.shields.io/badge/-rajin--khan-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rajin-khan) | ![Followers](https://img.shields.io/github/followers/rajin-khan?label=Follow&style=social) |
 
 ---
 
-## 📜 License
+### ⭐ **Star this repo if you want more cool stuff like this!**
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+## 🚀 Want to Contribute?
 
----
+cash is open-source, and minimalist. PRs are welcome!
+
 </div>
