@@ -13,15 +13,15 @@ This project serves as a **learning exercise** and a **foundation** for understa
 ---
 
 ## 💻 Features
-✅ Minimalist and lightweight shell implementation  
-✅ Command execution with argument parsing  
-✅ Process management using system calls  
-✅ Basic built-in commands (`cd`, `exit`, etc.)  
-✅ Background process execution (`&`)  
-✅ Input and output redirection (`>`, `<`)  
-✅ Piping between commands (`|`)  
-✅ (Experimental) Simple script file execution  
-✅ Extensible design for future features  
+- Minimalist and lightweight shell implementation  
+- Command execution with argument parsing  
+- Process management using system calls  
+- Basic built-in commands (`cd`, `exit`, etc.)  
+- Background process execution (`&`)  
+- Input and output redirection (`>`, `<`)  
+- Piping between commands (`|`)  
+- (Experimental) Simple script file execution  
+- Extensible design for future features  
 
 ---
 
@@ -150,7 +150,7 @@ sleep 30 &
 | ✅ Built-in commands | Completed |
 | ✅ Background process handling | Completed |
 | ✅ Redirection (`>`, `<`) | Completed |
-| ✅ Piping (`|`) | Completed |
+| ✅ Piping (`\|`) | Completed |
 | ✅ (Basic) Script file support | Completed |
 | ✅ Command history (`arrow keys` navigation) | Completed |
 | ⏳ Auto-completion (`tab` key) | Planning |
