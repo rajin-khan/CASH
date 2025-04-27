@@ -7,7 +7,7 @@
 
 ---
 
-**CASH** (*Command and Script Shell Advanced*) is a simple yet powerful shell built in C to explore **kernel processes, system calls, shell internals**, and **basic scripting**.  
+**CASH** (*Command and Script Shell*) is a simple yet powerful shell built in C to explore **kernel processes, system calls, shell internals**, and **basic scripting**.  
 This project serves as a **learning exercise** and a **foundation** for understanding how shells interact with the OS, manage processes, and execute commands — with real, modern features.
 
 ---
